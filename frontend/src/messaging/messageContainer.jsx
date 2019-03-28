@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Messages from "./messages.jsx";
 import SendMessage from "./sendMessage.jsx";
 import Channels from "./channels.jsx";
-// import { ChatManager, TokenProvider } from "@pusher/chatkit-server";
 import Chatkit from "@pusher/chatkit-client";
+import ChatkitServer from "@pusher/chatkit-server";
 
 import "../styles/chatbox.css";
 
@@ -14,14 +14,20 @@ const instanceLocator = "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff";
 class MessageContainer extends Component {
   state = {
     messages: [],
+<<<<<<< HEAD
     // roomId: "31189269"
     roomId: "31189404"
+=======
+    roomId: "31189269",
+    chatkitServer: ""
+>>>>>>> b939388e9d6cf71d8d8519520aed5447efea981b
   };
+
 
   // Maybe we can connect [props] the currentUser to the username form on the landing page
 
   componentDidMount = () => {
-    debugger;
+
     const chatManager = new Chatkit.ChatManager({
       instanceLocator: instanceLocator,
       userId: this.props.username,
@@ -44,7 +50,26 @@ class MessageContainer extends Component {
         }
       });
     });
+
+      const chatkitServer = new ChatkitServer({
+        instanceLocator: "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff",
+        key:
+          "a48470b6-48ae-41cb-8a79-2f51d22a0fe5:9NCpwiAJ1y8ecgzM2iQFUgJinrNC1+dcX8qWSwBPbqw="
+      });
+
+      this.setState({
+        chatkitServer: chatkitServer
+      });
+
   };
+
+  getRoom = () => {
+    this.state.chatkitServer.getRoom({
+      roomId: '31189269'
+    })
+    .then(room => console.log('got room', room))
+    .catch(err => console.error(err))
+  }
 
   sendMessage = text => {
     this.state.currentUser.sendMessage({
@@ -54,7 +79,7 @@ class MessageContainer extends Component {
   };
 
   render() {
-    debugger;
+
 
     console.log(this.state.messages);
     return (
@@ -67,6 +92,7 @@ class MessageContainer extends Component {
               messages={this.state.messages}
             />
             <SendMessage sendMessage={this.sendMessage} />
+            <button onClick={this.getRoom.bind(this)}>click</button>
           </div>
         </div>
       </>

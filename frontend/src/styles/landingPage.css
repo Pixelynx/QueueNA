@@ -40,6 +40,9 @@ h1 {
   font-family: 'Roboto', sans-serif;
   text-align: left;
   padding-left: 100px;
+  color:  rgb(123, 159, 201);
+  font-weight: bold;
+
 }
 
 .small-text {
@@ -53,7 +56,7 @@ h1 {
 h2 {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  font-size: 51px;
+  font-size: 57px;
   padding: 24px;
   margin-left: 59px;
 }
@@ -106,8 +109,45 @@ input[type="text"]{
   z-index: 1;
 }
 
+/* Select a channel to enter */
+
 p {
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+/* Channel Links */ 
+
+.channelButton {
+  width: 100%;
+  font-size: 25px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.channel-btn {
+  padding: 4px;
+  margin: 0;
+  text-align: center;
+}
+
+.channelButton ul li {
+  display: inline-block; 
+  list-style-type: none; 
+  padding: 10px 0; 
+}
+
+.channelButton ul li:hover {
+  background: rgb(174, 210, 252); 
+}
+
+.channelButton ul li > .channel-btn {
+  color: black;
+  text-decoration:none;
+  padding:12px;
+}
+
+.channelButton ul li > .channel-btn:hover {
+  color: rgb(156, 145, 145);
+  text-decoration: none;
 }
