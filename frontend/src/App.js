@@ -56,11 +56,6 @@ class App extends Component {
     console.log(this.state);
     return (
       <>
-<<<<<<< HEAD
-        <Route exact path='/' component={ LandingPage }/>
-        <Route path='/channel' component={ MessageContainer } />
-        <Route path='/about' component={ About }/>
-=======
         <Route
           exact
           path="/"
@@ -83,7 +78,6 @@ class App extends Component {
           )}
         />
         <Route path="/about" component={About} />
->>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
       </>
     );
   }
