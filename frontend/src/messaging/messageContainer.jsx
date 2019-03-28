@@ -18,11 +18,9 @@ class MessageContainer extends Component {
     chatkitServer: ""
   };
 
-
   // Maybe we can connect [props] the currentUser to the username form on the landing page
 
   componentDidMount = () => {
-
     const chatManager = new Chatkit.ChatManager({
       instanceLocator: instanceLocator,
       userId: this.props.username,
@@ -46,25 +44,25 @@ class MessageContainer extends Component {
       });
     });
 
-      const chatkitServer = new ChatkitServer({
-        instanceLocator: "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff",
-        key:
-          "a48470b6-48ae-41cb-8a79-2f51d22a0fe5:9NCpwiAJ1y8ecgzM2iQFUgJinrNC1+dcX8qWSwBPbqw="
-      });
+    const chatkitServer = new ChatkitServer({
+      instanceLocator: "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff",
+      key:
+        "a48470b6-48ae-41cb-8a79-2f51d22a0fe5:9NCpwiAJ1y8ecgzM2iQFUgJinrNC1+dcX8qWSwBPbqw="
+    });
 
-      this.setState({
-        chatkitServer: chatkitServer
-      });
-
+    this.setState({
+      chatkitServer: chatkitServer
+    });
   };
 
   getRoom = () => {
-    this.state.chatkitServer.getRoom({
-      roomId: '31189269'
-    })
-    .then(room => console.log('got room', room))
-    .catch(err => console.error(err))
-  }
+    this.state.chatkitServer
+      .getRoom({
+        roomId: "31189269"
+      })
+      .then(room => console.log("got room", room))
+      .catch(err => console.error(err));
+  };
 
   sendMessage = text => {
     this.state.currentUser.sendMessage({
@@ -74,13 +72,12 @@ class MessageContainer extends Component {
   };
 
   render() {
-
-
     console.log(this.state.messages);
     return (
       <>
         <div className="chatbox-container">
           <Channels />
+          
           <div className="message-container">
             <Messages
               roomId={this.state.roomId}
