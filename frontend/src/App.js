@@ -55,7 +55,10 @@ class App extends Component {
     console.log(this.state);
     return (
       <>
-        <Route exact path="/" render={() => (
+        <Route
+          exact
+          path="/"
+          render={() => (
             <LandingPage
               handleChange={this.handleChange}
               newUser={this.state.newUser}
@@ -63,7 +66,9 @@ class App extends Component {
             />
           )}
         />
-      <Route path="/channel" render={() => (
+        <Route
+          path="/channel/:id"
+          render={() => (
             <MessageContainer
               username={
                 this.state.isNewUserCreated ? this.state.newUser : "Anonymous"
