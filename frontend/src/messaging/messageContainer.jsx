@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import Messages from "./messages.jsx";
 import SendMessage from "./sendMessage.jsx";
 import Channels from "./channels.jsx";
-<<<<<<< HEAD
-=======
-// import { ChatManager, TokenProvider } from "@pusher/chatkit-server";
->>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 import Chatkit from "@pusher/chatkit-client";
 import ChatkitServer from "@pusher/chatkit-server";
 
@@ -18,12 +14,6 @@ const instanceLocator = "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff";
 class MessageContainer extends Component {
   state = {
     messages: [],
-<<<<<<< HEAD
-    rooms: [
-      {id: '31189269', name: 'javascript'},
-      {id: '31189404', name: 'swift'},
-      {id: '31189405', name: 'java'}
-    ],
     roomId: "31189269",
     chatkitServer: ""
   };
@@ -68,14 +58,12 @@ class MessageContainer extends Component {
   };
 
   getRoom = () => {
-    debugger
     this.state.chatkitServer.getRoom({
       roomId: '31189269'
     })
     .then(room => console.log('got room', room))
     .catch(err => console.error(err))
   }
-=======
 
   sendMessage = text => {
     this.state.currentUser.sendMessage({
