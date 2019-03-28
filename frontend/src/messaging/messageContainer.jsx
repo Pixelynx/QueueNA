@@ -22,6 +22,7 @@ class MessageContainer extends Component {
   // Maybe we can connect [props] the currentUser to the username form on the landing page
 
   componentDidMount = () => {
+
     const chatManager = new Chatkit.ChatManager({
       instanceLocator: instanceLocator,
       userId: this.props.username,
@@ -73,6 +74,7 @@ class MessageContainer extends Component {
   };
 
   render() {
+
 
     console.log(this.state.messages);
     return (
