@@ -11,7 +11,7 @@ class App extends Component {
     return(
       <>
         <Route exact path='/' component={ LandingPage }/>
-        <Route path='/channel/:name' component={ MessageContainer } />
+        <Route path='/channel' component={ MessageContainer } />
         <Route path='/about' component={ About }/>
       </>
     )
