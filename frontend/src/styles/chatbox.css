@@ -87,6 +87,7 @@
   width: 300px;
   min-height: 100vh;
   background-color: var(--main-color);
+  
 }
 
 .channel-item {
@@ -95,9 +96,9 @@
   font-size: 19px;
   font-family: 'Roboto Mono', sans-serif;
   list-style-type: none;
-  width: 100%;
+  width: 130%;
   padding: 30px 15px;
-  margin-left:-2em;
+  margin-left:-3em;
 
 }
 
