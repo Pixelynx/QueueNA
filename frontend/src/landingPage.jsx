@@ -1,25 +1,15 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react';
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 
-import './styles/landingPage.css';
+import "./styles/landingPage.css";
 
 class LandingPage extends Component {
-  state = {
-    selectedChannel: ''
-  }
-
-
-  // intended to grab value of selection to use as params in link -- probably need async function
-  handleChannelSelect = (e) => {
-    this.setState({ selectedChannel: e.target.value })
-  }
-
   render() {
-    console.log(this.state)
-    return(
+    return (
       <>
         <div className="landing_container">
           <title>Queue&A</title>
+
           <nav>
             <ul>
               <li><a id="notifyDemoButton2" class="btn btn-lg" href="/">Home</a></li>
@@ -27,16 +17,25 @@ class LandingPage extends Component {
             </ul>
           </nav>
           <h1>Welcome to Queue&A</h1>
+
           <div class="small-text">Realtime and Interactive</div>
 
           <h2>It's time to make it happen. Ask Your Q & help other developers troubleshoot and problem-solve.</h2>
           
           <div className="usernameParent">
             <div className="username">
-              <form>
-                <input className="effect" type="text" placeholder="Enter Username" />
-                <span class="focus-border"></span>
-              </form>
+               <form className="usernameFormDiv" onSubmit={this.props.handleSubmit}>
+            <input
+              className="effect"
+              type="text"
+              name="username"
+              value={this.props.newUser}
+              onChange={this.props.handleChange}
+            />
+            <span class="focus-border"></span>
+
+            <button type="submit">Submit</button>
+          </form>
             </div>
           </div>
           
@@ -44,8 +43,10 @@ class LandingPage extends Component {
 
           <div className="channelButton">
             <ul>
-              <li><a className="channel-btn" href="/channel">Javascript</a></li>
-              <li><a className="channel-btn" href="/channel">Swift</a></li>
+              <li><Link to={"/channel"} className="channel-btn">
+            Javascript
+          </Link></li>
+             
             </ul>
           </div>
 

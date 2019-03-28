@@ -125,7 +125,7 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.channelButton ul {
+.channel-btn {
   padding: 4px;
   margin: 0;
   text-align: center;
@@ -141,13 +141,13 @@ p {
   background: rgb(174, 210, 252); 
 }
 
-.channelButton ul li a {
+.channelButton ul li > .channel-btn {
   color: black;
   text-decoration:none;
   padding:12px;
 }
 
-.channelButton ul li a:hover {
+.channelButton ul li > .channel-btn:hover {
   color: rgb(156, 145, 145);
   text-decoration: none;
 }
