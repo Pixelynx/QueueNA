@@ -4,6 +4,7 @@ import SendMessage from "./sendMessage.jsx";
 import Channels from "./channels.jsx";
 import Chatkit from "@pusher/chatkit-client";
 import ChatkitServer from "@pusher/chatkit-server";
+import { withRouter } from "react-router-dom";
 
 import "../styles/chatbox.css";
 
@@ -21,6 +22,20 @@ class MessageContainer extends Component {
   // Maybe we can connect [props] the currentUser to the username form on the landing page
 
   componentDidMount = () => {
+    if (this.props.match.url === "/channel/javascript") {
+      this.setState({
+        roomId: "31189269"
+      });
+    } else if (this.props.match.url === "/channel/swift") {
+      this.setState({
+        roomId: "31189404"
+      });
+    } else if (this.props.match.url === "/channel/java") {
+      this.setState({
+        roomId: "31189405"
+      });
+    }
+
     const chatManager = new Chatkit.ChatManager({
       instanceLocator: instanceLocator,
       userId: this.props.username,
@@ -91,4 +106,4 @@ class MessageContainer extends Component {
   }
 }
 
-export default MessageContainer;
+export default withRouter(MessageContainer);
