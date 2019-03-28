@@ -1,5 +1,6 @@
 .landing_container {
   text-align: center;
+  overflow-x: hidden;
 }
 
 nav {
@@ -125,7 +126,7 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.channel-btn {
+.channelButton .channel-btn {
   padding: 4px;
   margin: 0;
   text-align: center;
@@ -141,13 +142,24 @@ p {
   background: rgb(174, 210, 252); 
 }
 
-.channelButton ul li > .channel-btn {
+.channelButton ul li a {
   color: black;
   text-decoration:none;
   padding:12px;
 }
 
-.channelButton ul li > .channel-btn:hover {
+.channelButton ul li a:hover {
   color: rgb(156, 145, 145);
   text-decoration: none;
+}
+
+.btn-6d {
+  border: 2px dashed #226fbe;
+  height: 42px;
+  width: 90px;
+}
+
+.btn-6d:hover {
+	background: transparent;
+	color: #226fbe;
 }
