@@ -98,6 +98,7 @@
   width: 100%;
   padding: 30px 15px;
   margin-left:-2em;
+
 }
 
 .channel-item:hover {
@@ -114,6 +115,19 @@
     padding-top: 0;
 }
 
-.channel-list {
+.home-btn {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 19px;
+  font-family: 'Roboto Mono', sans-serif;
+  list-style-type: none;
+  width: 100%;
+  padding: 30px 15px;
+  margin-left:-1em;
+  align-self: flex-end;
+  flex-shrink: 0;
+}
 
+.home-btn:hover {
+  background: rgba(127, 143, 218, 0.5);
 }
