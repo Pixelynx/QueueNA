@@ -43,7 +43,6 @@ getRoom = () => {
     return (
       <>
         <div className="landing_container">
-          <button onClick={this.getRoom}>ahhhhhhhh</button>
           <title>Queue&A</title>
 
           <nav>
@@ -82,7 +81,7 @@ getRoom = () => {
               <li><Link to={"/channel"} className="channel-btn">
             Javascript
           </Link></li>
-             
+
             </ul>
           </div>
 
