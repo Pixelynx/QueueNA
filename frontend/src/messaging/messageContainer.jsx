@@ -77,6 +77,7 @@ class MessageContainer extends Component {
       <>
         <div className="chatbox-container">
           <Channels />
+          
           <div className="message-container">
             <Messages
               roomId={this.state.roomId}
