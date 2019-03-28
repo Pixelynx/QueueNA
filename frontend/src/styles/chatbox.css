@@ -60,6 +60,7 @@
     overflow: scroll;
     background: var(--secondary-color);
     list-style-type: none; 
+    max-height: -webkit-fill-available;
 }
 
 .chat-input {

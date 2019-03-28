@@ -151,3 +151,14 @@ p {
   color: rgb(156, 145, 145);
   text-decoration: none;
 }
+
+.btn-6d {
+  border: 2px dashed #226fbe;
+  height: 42px;
+  width: 90px;
+}
+
+.btn-6d:hover {
+	background: transparent;
+	color: #226fbe;
+}
