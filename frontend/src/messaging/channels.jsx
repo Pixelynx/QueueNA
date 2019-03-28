@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/chatbox.css';
 
@@ -25,7 +26,7 @@ class Channels extends Component {
         <div className='channel-search-container'>
           <h1 className='channel-head'>Channels</h1>
           <ul className='channel-list'>{this.renderChannels()}</ul>
-          <div className='home-btn'>Back Home</div>
+          <div className='home-btn'><Link style={{textDecoration: 'none'}} to='/'>Back Home</Link></div>
         </div>
       </>
     )
