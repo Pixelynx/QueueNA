@@ -52,13 +52,14 @@
 
 .message-list {
     box-sizing: border-box;
+    max-height: -webkit-fill-available;
     padding: 0px 100px 0px 100px;
     margin: 0;
     width: 100%;
     height: 100%;
     overflow: scroll;
     background: var(--secondary-color);
-    list-style-type: none; 
+    list-style-type: none;
 }
 
 .chat-input {
