@@ -71,10 +71,10 @@ class LandingPage extends Component {
 
           <div className="usernameParent">
             <div className="username">
-              <form
-                className="usernameFormDiv"
-                onSubmit={this.props.handleSubmit}
-              >
+
+               <form className="usernameFormDiv" onSubmit={this.props.handleSubmit}>
+               <span class="focus-border"></span>
+
                 <input
                   className="effect"
                   type="text"
@@ -82,9 +82,11 @@ class LandingPage extends Component {
                   value={this.props.newUser}
                   onChange={this.props.handleChange}
                 />
-                <span class="focus-border" />
 
-                <button type="submit">Submit</button>
+
+                <div className="btnParent">
+                  <button className="btn-6d" type="submit">Submit</button>
+                </div>
               </form>
             </div>
           </div>
