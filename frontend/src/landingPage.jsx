@@ -42,8 +42,12 @@ class LandingPage extends Component {
           
           <p>Please select a channel to enter:</p>
 
-          <a className="channel-btn" href="/channel">Javascript</a>
-          <a className="channel-btn" href="/channel">Swift</a>
+          <div className="channelButton">
+            <ul>
+              <li><a className="channel-btn" href="/channel">Javascript</a></li>
+              <li><a className="channel-btn" href="/channel">Swift</a></li>
+            </ul>
+          </div>
 
         </div>
       </>
