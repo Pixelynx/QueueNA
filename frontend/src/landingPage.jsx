@@ -26,11 +26,14 @@ class LandingPage extends Component {
             <div className="username">
                <form className="usernameFormDiv" onSubmit={this.props.handleSubmit}>
             <input
+              className="effect"
               type="text"
               name="username"
               value={this.props.newUser}
               onChange={this.props.handleChange}
             />
+            <span class="focus-border"></span>
+
             <button type="submit">Submit</button>
           </form>
             </div>
@@ -38,9 +41,14 @@ class LandingPage extends Component {
           
           <p>Please select a channel to enter:</p>
 
-         <Link to={"/channel"} className="channel-btn">
+          <div className="channelButton">
+            <ul>
+              <li><Link to={"/channel"} className="channel-btn">
             Javascript
-          </Link>
+          </Link></li>
+             
+            </ul>
+          </div>
 
         </div>
       </>

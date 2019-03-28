@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Xolonium';
   src: url('./fonts/severin-meyer_xolonium/Xolonium-Bold.otf');
   src:
@@ -6,13 +6,13 @@
     url('./fonts/severin-meyer_xolonium/Xolonium-Bold.ttf')format('truetype'),
     url('./fonts/severin-meyer_xolonium/Xolonium-Regular.otf')format('opentype'),
     url('./fonts/severin-meyer_xolonium/Xolonium-Regular.ttf')format('truetype');
-  }
+  } */
 
-  :root {
-    --main-color: #181818;
-    --secondary-color: #252525;
-    --main-text-color: #D3D3D3;
-    --secondary-text-color: #65e52c;
+:root {
+    --main-color: white;
+    --secondary-color: rgb(127, 143, 218);
+    --main-text-color:black;
+    --secondary-text-color: rgb(51, 51, 131);
     --chat-input: #D3D3D3;
 }
 
@@ -46,18 +46,19 @@
     font-family: 'Xolonium';
     background: var(--main-color);
     color: var(--main-text-color);
-    padding: 8px 10px;
+    padding: 31px 7px;
     border-radius: 8px;
 }
 
 .message-list {
     box-sizing: border-box;
-    padding: 0 0 0 6px;
+    padding: 0px 100px 0px 100px;
     margin: 0;
     width: 100%;
     height: 100%;
     overflow: scroll;
     background: var(--secondary-color);
+    list-style-type: none; 
 }
 
 .chat-input {
@@ -92,4 +93,12 @@
 
 .channel-item {
   background-color: green;
+}
+
+.channel-head {
+  font-family: 'Roboto', sans-serif;
+    text-align: left;
+    color: rgb(123, 159, 201);
+    font-weight: bold;
+    padding: 100px 61px 0px 35px;
 }
