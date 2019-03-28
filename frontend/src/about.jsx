@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { Route, Link } from "react-router-dom";
+
 import './styles/about.css';
 
 export const About = () => {
   return(
     <>
+    <nav>
+    <ul><li><Link to={"/"} className="home-btn">
+            Home
+          </Link></li></ul>
+           </nav>
     <div className='about_container'>
     <h1 className='abouth1'>About Queue&A</h1>
     <p className='aboutp'>

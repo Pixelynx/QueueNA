@@ -1,5 +1,6 @@
 .landing_container {
   text-align: center;
+  overflow-x: hidden;
 }
 
 nav {
