@@ -4,7 +4,7 @@ import SendMessage from './sendMessage.jsx';
 // import { ChatManager, TokenProvider } from "@pusher/chatkit-server";
 import Chatkit from "@pusher/chatkit-client";
 
-import './App.css'
+import '../styles/chatbox.css';
 
 const testToken = "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/0d111987-7cc9-43a5-944a-628ce39f9dff/token"
 const instanceLocator = "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff"
@@ -53,7 +53,7 @@ class MessageContainer extends Component {
     render() {
       console.log(this.state.messages)
         return (
-            <div className="app">
+            <div className="message_container">
               <Messages
                   roomId={this.state.roomId}
                   messages={this.state.messages} />
