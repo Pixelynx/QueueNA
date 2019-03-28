@@ -77,14 +77,13 @@ class MessageContainer extends Component {
       <>
         <div className="chatbox-container">
           <Channels />
-          
+
           <div className="message-container">
             <Messages
               roomId={this.state.roomId}
               messages={this.state.messages}
             />
             <SendMessage sendMessage={this.sendMessage} />
-            <button onClick={this.getRoom.bind(this)}>click</button>
           </div>
         </div>
       </>
