@@ -67,7 +67,7 @@ class App extends Component {
           )}
         />
         <Route
-          path="/channel/"
+          path="/channel/:id"
           render={() => (
             <MessageContainer
               username={
