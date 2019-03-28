@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Messages from "./messages.jsx";
 import SendMessage from "./sendMessage.jsx";
 import Channels from "./channels.jsx";
+<<<<<<< HEAD
+=======
+// import { ChatManager, TokenProvider } from "@pusher/chatkit-server";
+>>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 import Chatkit from "@pusher/chatkit-client";
 import ChatkitServer from "@pusher/chatkit-server";
 
@@ -14,6 +18,7 @@ const instanceLocator = "v1:us1:0d111987-7cc9-43a5-944a-628ce39f9dff";
 class MessageContainer extends Component {
   state = {
     messages: [],
+<<<<<<< HEAD
     rooms: [
       {id: '31189269', name: 'javascript'},
       {id: '31189404', name: 'swift'},
@@ -70,6 +75,38 @@ class MessageContainer extends Component {
     .then(room => console.log('got room', room))
     .catch(err => console.error(err))
   }
+=======
+    roomId: "31189269"
+  };
+
+  // Maybe we can connect [props] the currentUser to the username form on the landing page
+
+  componentDidMount = () => {
+    debugger;
+    const chatManager = new Chatkit.ChatManager({
+      instanceLocator: instanceLocator,
+      userId: this.props.username,
+      tokenProvider: new Chatkit.TokenProvider({
+        url: testToken
+      })
+    });
+
+    chatManager.connect().then(currentUser => {
+      this.setState({ currentUser: currentUser });
+      return currentUser.subscribeToRoom({
+        roomId: this.state.roomId,
+        messageLimit: 100,
+        hooks: {
+          onMessage: message => {
+            this.setState({
+              messages: [...this.state.messages, message]
+            });
+          }
+        }
+      });
+    });
+  };
+>>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 
   sendMessage = text => {
     this.state.currentUser.sendMessage({
@@ -79,6 +116,10 @@ class MessageContainer extends Component {
   };
 
   render() {
+<<<<<<< HEAD
+=======
+    debugger;
+>>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 
     console.log(this.state.messages);
     return (
@@ -91,7 +132,10 @@ class MessageContainer extends Component {
               messages={this.state.messages}
             />
             <SendMessage sendMessage={this.sendMessage} />
+<<<<<<< HEAD
             <button onClick={this.getRoom.bind(this)}>click</button>
+=======
+>>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
           </div>
         </div>
       </>

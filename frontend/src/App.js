@@ -41,7 +41,6 @@ class App extends Component {
       });
   };
 
-
   handleChange = e => {
     this.setState({ newUser: e.target.value });
   };
@@ -71,7 +70,6 @@ class App extends Component {
           path="/channel/"
           render={() => (
             <MessageContainer
-              chatkitServer={this.state.chatkit}
               username={
                 this.state.isNewUserCreated ? this.state.newUser : "Anonymous"
               }
