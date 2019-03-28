@@ -4,10 +4,21 @@ import { Route, Link } from 'react';
 import './styles/landingPage.css';
 
 class LandingPage extends Component {
+  state = {
+    selectedChannel: ''
+  }
+
+
+  // intended to grab value of selection to use as params in link -- probably need async function
+  handleChannelSelect = (e) => {
+    this.setState({ selectedChannel: e.target.value })
+  }
+
   render() {
+    console.log(this.state)
     return(
       <>
-      <div class="landing_container">
+      <div className="landing_container">
       <title>Queue&A</title>
 
           <h1>Welcome to Queue&A</h1>
@@ -23,8 +34,8 @@ class LandingPage extends Component {
         <p>Please select which channel you'd like to enter:</p>
 
 
-        <a class="channel-btn" href="/channel">Javascript</a>
-        <a class="channel-btn" href="/channel">Swift</a>
+        <a className="channel-btn" href="/channel">Javascript</a>
+        <a className="channel-btn" href="/channel">Swift</a>
 
         </div>
 
