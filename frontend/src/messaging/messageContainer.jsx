@@ -16,6 +16,7 @@ class MessageContainer extends Component {
             currentUser: 'tjstevens92'
         }
 
+    // Maybe we can connect [props] the currentUser to the username form on the landing page
 
     componentDidMount = () => {
         const chatManager = new Chatkit.ChatManager({
