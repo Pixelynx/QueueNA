@@ -1,30 +1,15 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react';
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 
-import './styles/landingPage.css';
+import "./styles/landingPage.css";
 
 class LandingPage extends Component {
-  state = {
-    selectedChannel: '',
-    currentUser: ''
-  }
-
-
-  // intended to grab value of selection to use as params in link -- probably need async function
-  handleChannelSelect = (e) => {
-    this.setState({ selectedChannel: e.target.value })
-  }
-
-  handleTempUser = (e) => {
-    this.setState({ currentUser: e.target.value })
-  }
-
   render() {
-    console.log(this.state)
-    return(
+    return (
       <>
         <div className="landing_container">
           <title>Queue&A</title>
+
           <nav>
             <ul>
               <li><a id="notifyDemoButton2" class="btn btn-lg" href="/">Home</a></li>
@@ -39,18 +24,23 @@ class LandingPage extends Component {
           
           <div className="usernameParent">
             <div className="username">
-              <form>
-                <input className="effect" type="text" placeholder="Enter Username" />
-                <span class="focus-border"></span>
-              </form>
+               <form className="usernameFormDiv" onSubmit={this.props.handleSubmit}>
+            <input
+              type="text"
+              name="username"
+              value={this.props.newUser}
+              onChange={this.props.handleChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
             </div>
           </div>
           
           <p>Please select a channel to enter:</p>
 
-          <a className="channel-btn" href="/channel">Javascript</a>
-          <a className="channel-btn" href="/channel">Swift</a>
-
+         <Link to={"/channel"} className="channel-btn">
+            Javascript
+          </Link>
 
         </div>
       </>
