@@ -8,8 +8,8 @@ class Messages extends Component {
                 {this.props.messages.map((message, index) => {
                     return (
                       <li key={message.id} className="message">
-                        <div>{message.senderId}</div>
-                        <div>{message.text}</div>
+                        <div className='username'>{message.senderId}</div>
+                        <div className='text-body'>{message.text}</div>
                       </li>
                     )
                 })}
