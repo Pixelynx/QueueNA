@@ -44,7 +44,6 @@ class LandingPage extends Component {
     return (
       <>
         <div className="landing_container">
-          <button onClick={this.getRoom}>ahhhhhhhh</button>
           <title>Queue&A</title>
 
           <nav>
@@ -94,6 +93,7 @@ class LandingPage extends Component {
 
           <div className="channelButton">
             <ul>
+
               <li>
                 <Link to={"/channel/javascript"} className="channel-btn">
                   Javascript
@@ -109,6 +109,7 @@ class LandingPage extends Component {
                   Java
                 </Link>
               </li>
+
             </ul>
           </div>
         </div>
