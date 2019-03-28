@@ -5,13 +5,18 @@ import './styles/landingPage.css';
 
 class LandingPage extends Component {
   state = {
-    selectedChannel: ''
+    selectedChannel: '',
+    currentUser: ''
   }
 
 
   // intended to grab value of selection to use as params in link -- probably need async function
   handleChannelSelect = (e) => {
     this.setState({ selectedChannel: e.target.value })
+  }
+
+  handleTempUser = (e) => {
+    this.setState({ currentUser: e.target.value })
   }
 
   render() {
@@ -27,6 +32,7 @@ class LandingPage extends Component {
             </ul>
           </nav>
           <h1>Welcome to Queue&A</h1>
+
           <div class="small-text">Realtime and Interactive</div>
 
           <h2>It's time to make it happen. Ask Your Q & help other developers troubleshoot and problem-solve.</h2>
@@ -44,6 +50,7 @@ class LandingPage extends Component {
 
           <a className="channel-btn" href="/channel">Javascript</a>
           <a className="channel-btn" href="/channel">Swift</a>
+
 
         </div>
       </>
