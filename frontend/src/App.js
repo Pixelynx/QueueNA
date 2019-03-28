@@ -4,6 +4,8 @@ import MessageContainer from './messaging/messageContainer.jsx';
 import LandingPage from './landingPage.jsx';
 import { About } from './about.jsx';
 
+import './App.css';
+
 class App extends Component {
   render() {
     return(

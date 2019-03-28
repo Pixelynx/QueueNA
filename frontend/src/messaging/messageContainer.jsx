@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Messages from './messages.jsx';
 import SendMessage from './sendMessage.jsx';
+import Channels from './channels.jsx';
 // import { ChatManager, TokenProvider } from "@pusher/chatkit-server";
 import Chatkit from "@pusher/chatkit-client";
 
@@ -54,13 +55,18 @@ class MessageContainer extends Component {
     render() {
       console.log(this.state.messages)
         return (
-            <div className="message_container">
+          <>
+          <div className='chatbox-container'>
+            <Channels />
+            <div className="message-container">
               <Messages
                   roomId={this.state.roomId}
                   messages={this.state.messages} />
               <SendMessage
                   sendMessage={this.sendMessage} />
             </div>
+            </div>
+          </>
         );
     }
 }

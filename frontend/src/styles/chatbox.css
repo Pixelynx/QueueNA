@@ -16,9 +16,17 @@
     --chat-input: #D3D3D3;
 }
 
+.chatbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .message-container {
   background-color: black;
   display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  order: 2;
   align-self: center;
   margin: 5px 0;
   color: #D3D3D3;
@@ -66,7 +74,6 @@
     border: none;
     margin: 0;
     background: var(--chat-input);
-    font-weight: 200;
 }
 
 .chat-input input:focus {
@@ -75,4 +82,12 @@
 
 .chat-input input::placeholder {
     color: black;
+}
+
+.channel-search-container {
+  display: flex;
+  flex: .2;
+  width: 100px;
+  min-height: 100vh;
+  background-color: green;
 }
