@@ -72,7 +72,6 @@ class MessageContainer extends Component {
   };
 
   render() {
-    console.log(this.state.messages);
     return (
       <>
         <div className="chatbox-container">
