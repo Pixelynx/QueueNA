@@ -24,7 +24,7 @@ class Channels extends Component {
       <>
         <div className='channel-search-container'>
           <h1 className='channel-head'>Channels</h1>
-          <ul className='channel-list'>{this.renderChannels}</ul>
+          <ul className='channel-list'>{this.renderChannels()}</ul>
         </div>
       </>
     )

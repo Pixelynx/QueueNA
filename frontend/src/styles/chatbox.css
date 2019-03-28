@@ -1,12 +1,3 @@
-/* @font-face {
-  font-family: 'Xolonium';
-  src: url('./fonts/severin-meyer_xolonium/Xolonium-Bold.otf');
-  src:
-    url('./fonts/severin-meyer_xolonium/Xolonium-Bold.otf')format('opentype'),
-    url('./fonts/severin-meyer_xolonium/Xolonium-Bold.ttf')format('truetype'),
-    url('./fonts/severin-meyer_xolonium/Xolonium-Regular.otf')format('opentype'),
-    url('./fonts/severin-meyer_xolonium/Xolonium-Regular.ttf')format('truetype');
-  } */
 
 :root {
     --main-color: white;
@@ -91,6 +82,7 @@
 }
 
 .channel-search-container {
+  flex-direction: column;
   display: flex;
   width: 300px;
   min-height: 100vh;
@@ -98,13 +90,25 @@
 }
 
 .channel-item {
-  background-color: green;
+  font-size: 19px;
+  font-family: 'Roboto Mono', sans-serif;
+  list-style-type: none;
+  width: 100%;
+  padding: 30px 15px;
 }
 
+
+
 .channel-head {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     color: rgb(123, 159, 201);
     font-weight: bold;
     padding: 100px 61px 0px 35px;
+    height: 50px;
+    padding-top: 0;
+}
+
+.channel-list {
+
 }
