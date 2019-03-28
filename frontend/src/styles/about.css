@@ -1,0 +1,19 @@
+.about_container {
+   padding-top: 100px;
+   padding-left: 100px;
+   padding-right: 100px;
+}
+
+.abouth1 {
+    font-family: 'Roboto', sans-serif;
+   padding-left: 500px;
+   font-weight: bolder;
+ 
+  }
+
+.aboutp {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
