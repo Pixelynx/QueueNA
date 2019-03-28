@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Xolonium';
+  src: url('../styles/severin-meyer_xolonium/Xolonium-Bold.otf');
+  src:
+    url('./fonts/severin-meyer_xolonium/Xolonium-Bold.otf')format('opentype'),
+    url('./fonts/severin-meyer_xolonium/Xolonium-Bold.ttf')format('truetype'),
+    url('./fonts/severin-meyer_xolonium/Xolonium-Regular.otf')format('opentype'),
+    url('./fonts/severin-meyer_xolonium/Xolonium-Regular.ttf')format('truetype');
+
 .message-container {
   background-color: black;
   display: flex;
