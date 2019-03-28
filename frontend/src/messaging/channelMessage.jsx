@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export const ChannelMessage = () => {
+export const ChannelMessage = ({ currentUser }) => {
   return(
     <>
       

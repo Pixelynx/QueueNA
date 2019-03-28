@@ -5,13 +5,18 @@ import './styles/landingPage.css';
 
 class LandingPage extends Component {
   state = {
-    selectedChannel: ''
+    selectedChannel: '',
+    currentUser: ''
   }
 
 
   // intended to grab value of selection to use as params in link -- probably need async function
   handleChannelSelect = (e) => {
     this.setState({ selectedChannel: e.target.value })
+  }
+
+  handleTempUser = (e) => {
+    this.setState({ currentUser: e.target.value })
   }
 
   render() {
@@ -27,7 +32,7 @@ class LandingPage extends Component {
 
         <p>Enter Username:</p>
 
-        <form className="username">
+        <form className="username" onSubmit={this.handleTempUser}>
           <input type="text" name='username' />
         </form>
 
