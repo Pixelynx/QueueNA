@@ -10,16 +10,21 @@ class LandingPage extends Component {
         <div className="landing_container">
           <title>Queue&A</title>
 
+          <nav>
+            <ul>
+              <li><a id="notifyDemoButton2" class="btn btn-lg" href="/">Home</a></li>
+              <li><a id="notifyDemoButton3" class="btn btn-lg" href="/about/">About</a></li>
+            </ul>
+          </nav>
           <h1>Welcome to Queue&A</h1>
 
-          <h2>
-            An app for developers to help other developers troubleshoot and
-            problem solve.
-          </h2>
+          <div class="small-text">Realtime and Interactive</div>
 
-          <p>Enter Username:</p>
-
-          <form className="username" onSubmit={this.props.handleSubmit}>
+          <h2>It's time to make it happen. Ask Your Q & help other developers troubleshoot and problem-solve.</h2>
+          
+          <div className="usernameParent">
+            <div className="username">
+               <form className="usernameFormDiv" onSubmit={this.props.handleSubmit}>
             <input
               type="text"
               name="username"
@@ -28,14 +33,18 @@ class LandingPage extends Component {
             />
             <button type="submit">Submit</button>
           </form>
+            </div>
+          </div>
+          
+          <p>Please select a channel to enter:</p>
 
-          <p>Please select which channel you'd like to enter:</p>
-          <Link to={"/channel"} className="channel-btn">
+         <Link to={"/channel"} className="channel-btn">
             Javascript
           </Link>
+
         </div>
       </>
-    );
+    )
   }
 }
 

@@ -1,3 +1,113 @@
 .landing_container {
   text-align: center;
 }
+
+nav {
+  /* background: rgb(129, 144, 187); */
+  width: 100%;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+nav ul {
+  padding: 4px;
+  margin: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block; 
+  list-style-type: none; 
+  padding: 10px 0; 
+}
+
+nav ul li:hover {
+  background: rgb(174, 210, 252); 
+}
+
+nav ul li a {
+  color: black;
+  text-decoration:none;
+  padding:12px;
+}
+
+nav ul li a:hover {
+  color: rgb(156, 145, 145);
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  padding-left: 100px;
+}
+
+.small-text {
+  text-align: left;
+  font-family: 'Archivo Black', sans-serif;
+  padding: 10px 33px;
+  margin-left: 69px;
+
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 51px;
+  padding: 24px;
+  margin-left: 59px;
+}
+
+form{
+  text-align: center;
+}
+
+.usernameParent {
+  display: flex;
+  justify-content: flex-start
+}
+
+.username {
+  margin: 12px 45%; 
+  position: relative;
+} 
+
+input[type="text"]{
+  font: 15px/24px "Lato", Arial, sans-serif; 
+  color: #333; width: 100%; 
+  box-sizing: border-box; 
+  letter-spacing: 1px;}
+
+.effect {
+  border: 0; 
+  padding: 5px 0 7px; 
+  border: 1px solid transparent; 
+  transition: 0.4s;
+}
+
+.effect:focus {
+  padding: 5px 14px 7px; 
+  transition: 0.4s;
+  outline: none;
+}
+
+.effect ~ .focus-border{
+  position: absolute; 
+  height: 0; bottom: 0; 
+  left: 0; width: 100%; 
+  transition: 0.4s; 
+  z-index: -1;
+}
+
+.effect:focus ~ .focus-border{
+  transition: 0.4s; 
+  height: 36px; 
+  border: 2px solid rgb(77, 133, 189); 
+  z-index: 1;
+}
+
+p {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
