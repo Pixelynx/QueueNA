@@ -25,7 +25,7 @@ class SendMessage extends Component {
         return (
             <form
                 onSubmit={this.handleSubmit}
-                className="send-message-form">
+                className="chat-input">
                 <input
                     onChange={this.handleChange}
                     value={this.state.message}

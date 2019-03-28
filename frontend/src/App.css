@@ -18,7 +18,3 @@ html, body {
 #root {
     height: 100%;
 }
-
-.app {
-    height: calc(100% - 100px);
-}
