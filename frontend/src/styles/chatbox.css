@@ -90,14 +90,19 @@
 }
 
 .channel-item {
+  text-align: center;
+  vertical-align: middle;
   font-size: 19px;
   font-family: 'Roboto Mono', sans-serif;
   list-style-type: none;
   width: 100%;
   padding: 30px 15px;
+  margin-left:-2em;
 }
 
-
+.channel-item:hover {
+  background: rgba(127, 143, 218, 0.5);
+}
 
 .channel-head {
     font-family: 'Roboto', sans-serif;
