@@ -138,6 +138,10 @@ p {
   padding: 10px 0; 
 }
 
+.channelButton ul{
+  padding: 0 
+}
+
 .channelButton ul li:hover {
   background: rgb(174, 210, 252); 
 }
