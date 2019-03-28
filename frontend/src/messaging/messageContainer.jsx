@@ -76,37 +76,6 @@ class MessageContainer extends Component {
     .catch(err => console.error(err))
   }
 =======
-    roomId: "31189269"
-  };
-
-  // Maybe we can connect [props] the currentUser to the username form on the landing page
-
-  componentDidMount = () => {
-    debugger;
-    const chatManager = new Chatkit.ChatManager({
-      instanceLocator: instanceLocator,
-      userId: this.props.username,
-      tokenProvider: new Chatkit.TokenProvider({
-        url: testToken
-      })
-    });
-
-    chatManager.connect().then(currentUser => {
-      this.setState({ currentUser: currentUser });
-      return currentUser.subscribeToRoom({
-        roomId: this.state.roomId,
-        messageLimit: 100,
-        hooks: {
-          onMessage: message => {
-            this.setState({
-              messages: [...this.state.messages, message]
-            });
-          }
-        }
-      });
-    });
-  };
->>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 
   sendMessage = text => {
     this.state.currentUser.sendMessage({
@@ -116,10 +85,6 @@ class MessageContainer extends Component {
   };
 
   render() {
-<<<<<<< HEAD
-=======
-    debugger;
->>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
 
     console.log(this.state.messages);
     return (
@@ -132,10 +97,7 @@ class MessageContainer extends Component {
               messages={this.state.messages}
             />
             <SendMessage sendMessage={this.sendMessage} />
-<<<<<<< HEAD
             <button onClick={this.getRoom.bind(this)}>click</button>
-=======
->>>>>>> ff224f0761da2985834c2ed16d3a309c2185a5d1
           </div>
         </div>
       </>
