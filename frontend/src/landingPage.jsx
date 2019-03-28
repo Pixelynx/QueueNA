@@ -23,29 +23,38 @@ class LandingPage extends Component {
     console.log(this.state)
     return(
       <>
-      <div className="landing_container">
-      <title>Queue&A</title>
-
+        <div className="landing_container">
+          <title>Queue&A</title>
+          <nav>
+            <ul>
+              <li><a id="notifyDemoButton2" class="btn btn-lg" href="/">Home</a></li>
+              <li><a id="notifyDemoButton3" class="btn btn-lg" href="/about/">About</a></li>
+            </ul>
+          </nav>
           <h1>Welcome to Queue&A</h1>
 
-          <h2>An app for developers to help other developers troubleshoot and problem solve.</h2>
+          <div class="small-text">Realtime and Interactive</div>
 
-        <p>Enter Username:</p>
+          <h2>It's time to make it happen. Ask Your Q & help other developers troubleshoot and problem-solve.</h2>
+          
+          <div className="usernameParent">
+            <div className="username">
+              <form>
+                <input className="effect" type="text" placeholder="Enter Username" />
+                <span class="focus-border"></span>
+              </form>
+            </div>
+          </div>
+          
+          <p>Please select a channel to enter:</p>
 
-        <form className="username" onSubmit={this.handleTempUser}>
-          <input type="text" name='username' />
-        </form>
+          <a className="channel-btn" href="/channel">Javascript</a>
+          <a className="channel-btn" href="/channel">Swift</a>
 
-        <p>Please select which channel you'd like to enter:</p>
-
-
-        <a className="channel-btn" href="/channel">Javascript</a>
-        <a className="channel-btn" href="/channel">Swift</a>
 
         </div>
-
-        </>
-          )
+      </>
+    )
   }
 }
 
